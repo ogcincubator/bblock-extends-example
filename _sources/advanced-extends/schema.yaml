@@ -1,6 +1,6 @@
 "$schema": https://json-schema.org/draft/2020-12/schema
 description: 'Schema for my building block'
-'@modelReference': context.jsonld
+x-jsonld-context: context.jsonld
 type: object
 properties:
   a:

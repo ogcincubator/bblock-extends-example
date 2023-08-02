@@ -1,0 +1,13 @@
+{
+  "name": "Simple extends",
+  "abstract": "This Building Block shows how to use the extension mechanism",
+  "status": "under-development",
+  "dateTimeAddition": "2023-08-02T00:00:00Z",
+  "itemClass": "schema",
+  "register": "ogc-building-block-register",
+  "version": "0.1",
+  "dateOfLastChange": "2023-04-05",
+  "scope": "unstable",
+  "tags": ["examples"],
+  "extends": "ogc.geo.json-fg.feature"
+}
