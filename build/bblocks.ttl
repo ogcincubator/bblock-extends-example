@@ -1,3 +1,4 @@
+@prefix bblocks: <https://www.opengis.net/def/bblocks/> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -5,21 +6,61 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+bblocks:ogc.bbr.template.advanced-extends a skos:Concept,
+        bblocks:Schema ;
+    rdfs:label "Advanced extends" ;
+    dct:abstract "This Building Block shows how to use the extension mechanism" ;
+    dct:created "2023-08-02T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://raw.githubusercontent.com/ogcincubator/bblock-extends-example/master/build/generateddocs/json-full/bbr/template/advanced-extends/index.json" ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://raw.githubusercontent.com/ogcincubator/bblock-extends-example/master/build/generateddocs/markdown/bbr/template/advanced-extends/index.md" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://raw.githubusercontent.com/ogcincubator/bblock-extends-example/master/build/generateddocs/slate-build/bbr/template/advanced-extends/" ] ;
+    dct:hasVersion "0.1" ;
+    dct:modified "2023-04-05"^^xsd:date ;
+    skos:inScheme <https://www.opengis.net/def/bblocks> ;
+    bblocks:hasJsonLdContext <https://raw.githubusercontent.com/ogcincubator/bblock-extends-example/master/build/annotated/bbr/template/advanced-extends/context.jsonld> ;
+    bblocks:hasSchema <https://raw.githubusercontent.com/ogcincubator/bblock-extends-example/master/build/annotated/bbr/template/advanced-extends/schema.json>,
+        <https://raw.githubusercontent.com/ogcincubator/bblock-extends-example/master/build/annotated/bbr/template/advanced-extends/schema.yaml> ;
+    bblocks:scope <http://www.opengis.net/def/bblocks/scope/unstable> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> .
+
+bblocks:ogc.bbr.template.simple-extends a skos:Concept,
+        bblocks:Schema ;
+    rdfs:label "Simple extends" ;
+    dct:abstract "This Building Block shows how to use the extension mechanism" ;
+    dct:created "2023-08-02T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://raw.githubusercontent.com/ogcincubator/bblock-extends-example/master/build/generateddocs/slate-build/bbr/template/simple-extends/" ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://raw.githubusercontent.com/ogcincubator/bblock-extends-example/master/build/generateddocs/json-full/bbr/template/simple-extends/index.json" ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://raw.githubusercontent.com/ogcincubator/bblock-extends-example/master/build/generateddocs/markdown/bbr/template/simple-extends/index.md" ] ;
+    dct:hasVersion "0.1" ;
+    dct:modified "2023-04-05"^^xsd:date ;
+    skos:inScheme <https://www.opengis.net/def/bblocks> ;
+    bblocks:hasJsonLdContext <https://raw.githubusercontent.com/ogcincubator/bblock-extends-example/master/build/annotated/bbr/template/simple-extends/context.jsonld> ;
+    bblocks:hasSchema <https://raw.githubusercontent.com/ogcincubator/bblock-extends-example/master/build/annotated/bbr/template/simple-extends/schema.json>,
+        <https://raw.githubusercontent.com/ogcincubator/bblock-extends-example/master/build/annotated/bbr/template/simple-extends/schema.yaml> ;
+    bblocks:scope <http://www.opengis.net/def/bblocks/scope/unstable> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> .
+
 <https://www.opengis.net/def/bblocks> a skos:ConceptScheme ;
     skos:prefLabel "OGC Building Blocks Register" .
 
 [] a prov:Activity ;
-    prov:endedAtTime "2023-08-02T08:29:32.800442"^^xsd:dateTime ;
-    prov:startedAtTime "2023-08-02T08:29:32.498900"^^xsd:dateTime ;
+    prov:endedAtTime "2023-08-02T10:07:23.725590"^^xsd:dateTime ;
+    prov:startedAtTime "2023-08-02T10:07:23.485244"^^xsd:dateTime ;
     prov:used [ a prov:Entity ;
-            dct:format "application/yaml" ;
-            rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ],
-        [ a prov:Entity ;
             dct:format "application/json" ;
-            rdfs:seeAlso <file:///github/workspace/build/register.json> ] ;
+            rdfs:seeAlso <file:///github/workspace/build/register.json> ],
+        [ a prov:Entity ;
+            dct:format "application/yaml" ;
+            rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ] ;
     prov:wasAssociatedWith [ a prov:Agent,
                 schema:SoftwareApplication ;
             rdfs:label "OGC-NA tools" ;
-            dct:hasVersion "0.3.5" ;
+            dct:hasVersion "0.3.7" ;
             rdfs:seeAlso <https://github.com/opengeospatial/ogc-na-tools> ] .
 

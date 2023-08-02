@@ -1,0 +1,25 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+allOf:
+- $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/json-fg/feature/schema.yaml
+- properties:
+    prop1:
+      properties:
+        propArray:
+          type: array
+          items:
+            properties:
+              prop3:
+                description: Schema for my building block
+                type: object
+                properties:
+                  a:
+                    type: string
+                    format: uri
+                    x-jsonld-id: https://example.org/my-bb-model/a
+                    x-jsonld-type: '@id'
+                  b:
+                    type: number
+                    x-jsonld-id: https://example.org/my-bb-model/b
+                required:
+                - a
+                - b
